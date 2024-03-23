@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/coder-shubh/react-native-BannerSlider.git"
+    "url": "git+https://github.com/coder-shubh/react-native-image-slider.git"
   },
   "keywords": [
     "react",
@@ -25,7 +25,7 @@
   "author": "coder-shubh",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/coder-shubh/react-native-BannerSlider/issues"
+    "url": "https://github.com/coder-shubh/react-native-image-slider.git/issues"
   },
-  "homepage": "https://github.com/coder-shubh/react-native-BannerSlider#readme"
+  "homepage": "https://github.com/coder-shubh/react-native-image-slider.git#readme"
 }
