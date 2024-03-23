@@ -24,6 +24,11 @@
   ],
   "author": "coder-shubh",
   "license": "ISC",
+  "peerDependencies": {
+    "react": "18.2.0",
+    "react-native": "0.72.10",
+    "react-native-vector-icons": "^10.0.3"
+  },
   "bugs": {
     "url": "https://github.com/coder-shubh/react-native-image-slider.git/issues"
   },
