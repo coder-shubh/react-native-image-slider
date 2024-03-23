@@ -1,8 +1,8 @@
 // import React, { useRef, useState, useEffect } from 'react';
 import React from 'react';
-import { useCommonImports } from '../imports';
+import { useCommonImports } from './src/imports';
 import {ScrollView } from 'react-native';
-import globalStyles from '../assets/globalStyles';
+import globalStyles from './src/assets/globalStyles';
 
 interface ImageSliderProps {
   images: string[];
