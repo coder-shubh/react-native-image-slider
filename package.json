@@ -1,0 +1,31 @@
+{
+  "name": "@coder-shubh/react-native-image-slider",
+  "version": "1.0.0",
+  "description": "A customizable and easy-to-use image slider component for React-Native.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coder-shubh/react-native-BannerSlider.git"
+  },
+  "keywords": [
+    "react",
+    "react-native",
+    "slider",
+    "image",
+    "image-slider",
+    "banner",
+    "banner-slider",
+    "carousel",
+    "component",
+    "coder-shubh"
+  ],
+  "author": "coder-shubh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coder-shubh/react-native-BannerSlider/issues"
+  },
+  "homepage": "https://github.com/coder-shubh/react-native-BannerSlider#readme"
+}
