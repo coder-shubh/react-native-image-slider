@@ -11,6 +11,7 @@
 <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
   <!-- First GIF -->
   <img src="https://raw.githubusercontent.com/coder-shubh/react-native-image-slider/master/src/assets/vid.gif" alt="Demo 1" width="45%">
+    <img src="https://raw.githubusercontent.com/coder-shubh/react-native-image-slider/master/src/assets/vido.gif" alt="Demo 1" width="45%">
 </div>
 
 
