@@ -34,10 +34,10 @@ You can install the `@coder-shubh/react-native-image-slider` package using npm o
 
 ```bash
 # with npm
-npm i @coder-shubh/react-native-image-slider
+npm i @coder-shubh/react-native-image-slider react-native-vector-icons
 
 # with yarn
-yarn add @coder-shubh/react-native-image-slider
+yarn add @coder-shubh/react-native-image-slider react-native-vector-icons
 ```
 
 <!-- Usage -->
@@ -67,6 +67,7 @@ const App = () => {
       extrapolate='clamp'
       autoSlideInterval={5000}
       containerStyle={{ marginBottom: 20 }}
+      radius={5}
     />
   );
 };
@@ -91,6 +92,7 @@ export default App;
 | `extrapolate`         | `'clamp' \| 'extend' \| 'identity'` | Image scroll extrapolation behavior.   | `'clamp'`     |
 | `autoSlideInterval`   | `number`                 | Auto slide interval in milliseconds.           | `3000`        |
 | `containerStyle`      | `any`                    | Custom style for the indicator container.      | `{}`          |
+| `radius`              | `number`                 | 	Border radius for the image cards.            | `5`          |
 
 
 

@@ -17,6 +17,7 @@ interface ImageSliderProps {
   extrapolate?: 'clamp' | 'extend' | 'identity';
   autoSlideInterval?: number;
   containerStyle?: any;
+  radius?:number;
 }
 
 const ImageSlider: React.FC<ImageSliderProps> = ({
@@ -32,6 +33,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
   extrapolate = 'clamp',
   autoSlideInterval = 3000, // Auto slide interval in milliseconds
   containerStyle = {}, // Custom style for the indicatorContainer
+  radius=5
 }) => {
   const {
     SafeAreaView,
@@ -123,7 +125,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
             <View
               key={imageIndex}
               style={{ width: windowWidth, height: imageHeight }}>
-              <ImageBackground source={{ uri: image }} style={styles.card}>
+              <ImageBackground source={{ uri: image }} style={[styles.card,{borderRadius: radius}]}>
                 {imageLabel && (
                   <View style={styles.textContainer}>
                     {label ? (

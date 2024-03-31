@@ -1,6 +1,6 @@
 {
   "name": "@coder-shubh/react-native-image-slider",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "A customizable and easy-to-use image slider component for React-Native.",
   "main": "index.tsx",
   "scripts": {
@@ -11,6 +11,10 @@
     "url": "git+https://github.com/coder-shubh/react-native-image-slider.git"
   },
   "keywords": [
+    "react-native-image-slider-box",
+    "react-native-image-slider",
+    "react-native-slider",
+    "ReactNative",
     "react",
     "react-native",
     "slider",
@@ -20,7 +24,14 @@
     "banner-slider",
     "carousel",
     "component",
-    "coder-shubh"
+    "coder-shubh",
+    "react-component",
+    "react-native-component",
+    "mobile",
+    "ui",
+    "slider",
+    "image paging slider"
+    
   ],
   "author": "coder-shubh",
   "license": "ISC",
