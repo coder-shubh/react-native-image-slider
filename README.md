@@ -56,6 +56,7 @@ const App = () => {
 
   return (
 <ImageSlider
+      testID="imageSlider_testID"
       images={images}
       imageHeight={250}
       dotSize={10}
