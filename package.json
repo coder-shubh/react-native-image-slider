@@ -1,6 +1,6 @@
 {
   "name": "@coder-shubh/react-native-image-slider",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A customizable and easy-to-use image slider component for React-Native.",
   "main": "index.tsx",
   "scripts": {

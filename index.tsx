@@ -1,4 +1,3 @@
-// import React, { useRef, useState, useEffect } from 'react';
 import React from 'react';
 import { useCommonImports } from './src/imports';
 import {ScrollView } from 'react-native';
@@ -18,6 +17,7 @@ interface ImageSliderProps {
   autoSlideInterval?: number;
   containerStyle?: any;
   radius?:number;
+  testID?:string;
 }
 
 const ImageSlider: React.FC<ImageSliderProps> = ({
@@ -33,7 +33,8 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
   extrapolate = 'clamp',
   autoSlideInterval = 3000, // Auto slide interval in milliseconds
   containerStyle = {}, // Custom style for the indicatorContainer
-  radius=5
+  radius=5,
+  testID
 }) => {
   const {
     SafeAreaView,
@@ -102,7 +103,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
   };
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView testID={testID}style={styles.container}>
       <View style={styles.scrollContainer}>
 
         <ScrollView
