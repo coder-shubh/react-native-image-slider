@@ -1,7 +1,7 @@
-import React from 'react';
-import { useCommonImports } from './src/imports';
-import {ScrollView } from 'react-native';
-import globalStyles from './src/assets/globalStyles';
+import React from "react";
+import { useCommonImports } from "./src/imports";
+import { ScrollView } from "react-native";
+import globalStyles from "./src/assets/globalStyles";
 
 interface ImageSliderProps {
   images: string[];
@@ -13,28 +13,28 @@ interface ImageSliderProps {
   showIndicatorDots?: boolean;
   imageLabel?: boolean;
   label?: string;
-  extrapolate?: 'clamp' | 'extend' | 'identity';
+  extrapolate?: "clamp" | "extend" | "identity";
   autoSlideInterval?: number;
   containerStyle?: any;
-  radius?:number;
-  testID?:string;
+  radius?: number;
+  testID?: string;
 }
 
 const ImageSlider: React.FC<ImageSliderProps> = ({
   images,
   imageHeight = 250,
   dotSize = 8,
-  dotColor = 'silver',
-  activeDotColor = 'blue',
+  dotColor = "silver",
+  activeDotColor = "blue",
   showNavigationButtons = true,
   showIndicatorDots = true,
   imageLabel = true,
-  label = '',
-  extrapolate = 'clamp',
+  label = "",
+  extrapolate = "clamp",
   autoSlideInterval = 3000, // Auto slide interval in milliseconds
   containerStyle = {}, // Custom style for the indicatorContainer
-  radius=5,
-  testID
+  radius = 5,
+  testID,
 }) => {
   const {
     SafeAreaView,
@@ -48,7 +48,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
     Text,
     useState,
     useEffect,
-    StyleSheet
+    StyleSheet,
   } = useCommonImports();
   const scrollX = React.useRef(new Animated.Value(0)).current;
   const scrollViewRef = React.useRef<ScrollView>(null);
@@ -103,9 +103,8 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
   };
 
   return (
-    <SafeAreaView testID={testID}style={styles.container}>
+    <SafeAreaView testID={testID} style={styles.container}>
       <View style={styles.scrollContainer}>
-
         <ScrollView
           ref={scrollViewRef}
           horizontal
@@ -121,19 +120,26 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
             },
           ])}
           onMomentumScrollEnd={handleScrollEnd}
-          scrollEventThrottle={1}>
+          scrollEventThrottle={1}
+        >
           {images.map((image, imageIndex) => (
             <View
               key={imageIndex}
-              style={{ width: windowWidth, height: imageHeight }}>
-              <ImageBackground source={{ uri: image }} style={[styles.card,{borderRadius: radius}]}>
+              style={{ width: windowWidth, height: imageHeight }}
+            >
+              <ImageBackground
+                source={{ uri: image }}
+                style={[styles.card, { borderRadius: radius }]}
+                onError={() => console.warn('Image failed to load.')}
+              >
                 {imageLabel && (
                   <View style={styles.textContainer}>
                     {label ? (
                       <Text style={styles.infoText}>{label}</Text>
                     ) : (
                       <Text
-                        style={styles.infoText}>{`Image: ${imageIndex}`}</Text>
+                        style={styles.infoText}
+                      >{`Image: ${imageIndex}`}</Text>
                     )}
                   </View>
                 )}
@@ -146,16 +152,19 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
           <View style={styles.navigationContainer}>
             <TouchableOpacity
               style={styles.textContainer}
-              onPress={handlePrevious}>
+              onPress={handlePrevious}
+              accessible={true}
+              accessibilityLabel="Previous Image"
+            >
               <MaterialIcons
-                name={'caretleft'}
+                name={"caretleft"}
                 size={20}
                 style={styles.closeIcon}
               />
             </TouchableOpacity>
             <TouchableOpacity style={styles.textContainer} onPress={handleNext}>
               <MaterialIcons
-                name={'caretright'}
+                name={"caretright"}
                 size={20}
                 style={styles.closeIcon}
               />
@@ -195,6 +204,5 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
     </SafeAreaView>
   );
 };
-
 
 export default ImageSlider;
