@@ -1,8 +1,9 @@
 {
   "name": "@coder-shubh/react-native-image-slider",
-  "version": "1.0.8",
-  "description": "A customizable and easy-to-use image slider component for React-Native.",
-  "main": "index.tsx",
+  "version": "2.0.0",
+  "description": "A customizable, feature-rich image slider for React Native with autoplay, loop, custom render, and callbacks.",
+  "main": "index.js",
+  "types": "index.tsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,37 +12,32 @@
     "url": "git+https://github.com/coder-shubh/react-native-image-slider.git"
   },
   "keywords": [
-    "react-native-image-slider-box",
     "react-native-image-slider",
     "react-native-slider",
-    "ReactNative",
-    "react",
     "react-native",
     "slider",
-    "image",
     "image-slider",
     "banner",
-    "banner-slider",
     "carousel",
-    "component",
-    "coder-shubh",
-    "react-component",
-    "react-native-component",
-    "mobile",
-    "ui",
-    "slider",
-    "image paging slider"
-    
+    "image",
+    "paging",
+    "autoplay",
+    "indicator",
+    "dots",
+    "coder-shubh"
   ],
   "author": "coder-shubh",
   "license": "ISC",
   "peerDependencies": {
-    "react": "^19.0.0",
-    "react-native": "^0.78.0",
-    "react-native-vector-icons": "^10.2.0"
+    "react": ">=16.8.0",
+    "react-native": ">=0.60.0",
+    "react-native-vector-icons": ">=9.0.0"
   },
   "bugs": {
-    "url": "https://github.com/coder-shubh/react-native-image-slider.git/issues"
+    "url": "https://github.com/coder-shubh/react-native-image-slider/issues"
   },
-  "homepage": "https://github.com/coder-shubh/react-native-image-slider.git#readme"
+  "homepage": "https://github.com/coder-shubh/react-native-image-slider#readme",
+  "engines": {
+    "node": ">=14"
+  }
 }
